@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,106 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eU4-9F-5wU">
+                                <rect key="frame" x="164" y="312" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="ButtonTotchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="P3L-Yc-Msl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Da1-bw-Uqe">
+                                <rect key="frame" x="77" y="201" width="202" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6g2-MP-Ewh">
+                                <rect key="frame" x="67" y="367" width="240" height="210"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="zeK-a7-cZ0"/>
+                                </constraints>
+                                <string key="text">1 subgoal
+A : Prop
+H : A
+__________________(1/1)
+A</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="8IJ-OD-aVl" appends="YES" id="64f-4k-7n2"/>
+                                    <outletCollection property="gestureRecognizers" destination="b4s-N3-jjO" appends="YES" id="GWl-oS-C0P"/>
+                                </connections>
+                            </textView>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PanLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkr-do-vzL">
+                                <rect key="frame" x="152" y="283" width="71" height="21"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="yHT-2C-f6J" appends="YES" id="uY8-2Z-i4M"/>
+                                </connections>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IbI-sS-UpC">
+                                <rect key="frame" x="58" y="33" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.66666668653488159" green="0.21963206554669581" blue="0.20980535752887733" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IbI-sS-UpC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="4J6-Pu-1RL"/>
+                            <constraint firstItem="bkr-do-vzL" firstAttribute="centerX" secondItem="eU4-9F-5wU" secondAttribute="centerX" id="6E8-n8-5SP"/>
+                            <constraint firstItem="bkr-do-vzL" firstAttribute="top" secondItem="Da1-bw-Uqe" secondAttribute="bottom" constant="61" id="7aY-Yn-PcJ"/>
+                            <constraint firstItem="6g2-MP-Ewh" firstAttribute="top" secondItem="eU4-9F-5wU" secondAttribute="bottom" constant="25" id="AsY-ym-AT7"/>
+                            <constraint firstItem="Da1-bw-Uqe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="CWr-Ry-K4S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6g2-MP-Ewh" secondAttribute="bottom" constant="90" id="LJG-J6-T5E"/>
+                            <constraint firstItem="IbI-sS-UpC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="S4S-e6-5zI"/>
+                            <constraint firstItem="eU4-9F-5wU" firstAttribute="centerX" secondItem="6g2-MP-Ewh" secondAttribute="centerX" id="f4x-C4-T6v"/>
+                            <constraint firstItem="eU4-9F-5wU" firstAttribute="top" secondItem="bkr-do-vzL" secondAttribute="bottom" constant="8" symbolic="YES" id="hWt-NJ-Emr"/>
+                            <constraint firstItem="Da1-bw-Uqe" firstAttribute="top" secondItem="IbI-sS-UpC" secondAttribute="bottom" constant="40" id="jWz-ZK-8JE"/>
+                            <constraint firstItem="IbI-sS-UpC" firstAttribute="centerX" secondItem="Da1-bw-Uqe" secondAttribute="centerX" id="kpR-kY-9pu"/>
+                            <constraint firstItem="6g2-MP-Ewh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="tjc-nS-M4F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IbI-sS-UpC" secondAttribute="trailing" constant="77" id="um9-x4-OKu"/>
+                            <constraint firstItem="eU4-9F-5wU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xsO-R7-570"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="Label1" destination="Da1-bw-Uqe" id="kvw-5L-i9k"/>
+                        <outlet property="Swip_Zone" destination="IbI-sS-UpC" id="aOI-jG-9Q2"/>
+                        <outlet property="label2" destination="bkr-do-vzL" id="qKW-67-cos"/>
+                        <outlet property="pan1" destination="yHT-2C-f6J" id="TEG-nC-gQt"/>
+                        <outlet property="pan2" destination="8IJ-OD-aVl" id="lyD-3l-VEe"/>
+                        <outlet property="tap" destination="b4s-N3-jjO" id="xyu-sf-rHb"/>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="AzV-7e-XVG"/>
+                        <outletCollection property="textView" destination="6g2-MP-Ewh" collectionClass="NSMutableArray" id="Nj0-ar-qnh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="yHT-2C-f6J">
+                    <connections>
+                        <action selector="panLabel:" destination="BYZ-38-t0r" id="zNr-kO-re8"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="8IJ-OD-aVl">
+                    <connections>
+                        <action selector="pantest:" destination="BYZ-38-t0r" id="K8x-fE-SCe"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer id="b4s-N3-jjO">
+                    <connections>
+                        <action selector="tapString:" destination="BYZ-38-t0r" id="b0Q-KV-Mhv"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-250.40000000000001" y="-67.016491754122939"/>
         </scene>
     </scenes>
 </document>

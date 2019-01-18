@@ -14,6 +14,7 @@
 		836F125D2091C22D008598F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836F125B2091C22D008598F3 /* LaunchScreen.storyboard */; };
 		836F12682091C22D008598F3 /* testappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836F12672091C22D008598F3 /* testappTests.swift */; };
 		836F12732091C22D008598F3 /* testappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836F12722091C22D008598F3 /* testappUITests.swift */; };
+		8397018521E708AD00C9DD3B /* Storyboard2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8397018421E708AD00C9DD3B /* Storyboard2.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		836F126E2091C22D008598F3 /* testappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		836F12722091C22D008598F3 /* testappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testappUITests.swift; sourceTree = "<group>"; };
 		836F12742091C22D008598F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8397018421E708AD00C9DD3B /* Storyboard2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard2.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				836F12522091C22D008598F3 /* AppDelegate.swift */,
 				836F12542091C22D008598F3 /* ViewController.swift */,
 				836F12562091C22D008598F3 /* Main.storyboard */,
+				8397018421E708AD00C9DD3B /* Storyboard2.storyboard */,
 				836F12592091C22D008598F3 /* Assets.xcassets */,
 				836F125B2091C22D008598F3 /* LaunchScreen.storyboard */,
 				836F125E2091C22D008598F3 /* Info.plist */,
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8397018521E708AD00C9DD3B /* Storyboard2.storyboard in Resources */,
 				836F125D2091C22D008598F3 /* LaunchScreen.storyboard in Resources */,
 				836F125A2091C22D008598F3 /* Assets.xcassets in Resources */,
 				836F12582091C22D008598F3 /* Main.storyboard in Resources */,
@@ -432,7 +436,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sou.jp.testapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -446,7 +450,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sou.jp.testapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
